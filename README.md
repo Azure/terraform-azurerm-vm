@@ -120,15 +120,6 @@ More specifically this provisions:
     allow_ssh_traffic   = "true"
     resource_group_name = "terraform-advancedvms"
   }
-
-  output "linux_vm_private_ips" {
-    value = "${module.linuxservers.network_interface_private_ip}"
-  }
-
-  output "windows_vm_private_ips" {
-    value = "${module.windowsservers.network_interface_private_ip}"
-  }
-
 ```
 
 Test
