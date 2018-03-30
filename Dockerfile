@@ -2,7 +2,7 @@
 ARG BUILD_TERRAFORM_VERSION="0.11.1"
 FROM microsoft/terraform-test:${BUILD_TERRAFORM_VERSION}
 
-ARG MODULE_NAME="terraform-azurerm-compute"
+ARG MODULE_NAME="terraform-azurerm-vm"
 
 # Declare default build configurations for terraform.
 ARG BUILD_ARM_SUBSCRIPTION_ID=""

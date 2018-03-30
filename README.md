@@ -44,17 +44,7 @@ Provisions an Ubuntu Server 16.04-LTS VM and a Windows 2016 Datacenter Server VM
     source              = "Azure/vnet/azurerm"
     version             = "~> 1.0.0"
     location            = "West US 2"
-    allow_rdp_traffic   = "true"
-    allow_ssh_traffic   = "true"
     resource_group_name = "terraform-vm"
-  }
-
-  output "linux_vm_public_name"{
-    value = "${module.linuxservers.public_ip_dns_name}"
-  }
-
-  output "windows_vm_public_name"{
-    value = "${module.windowsservers.public_ip_dns_name}"
   }
 ```
 
@@ -133,14 +123,6 @@ More specifically this provisions:
 
   output "linux_vm_private_ips" {
     value = "${module.linuxservers.network_interface_private_ip}"
-  }
-
-  output "windows_vm_public_name"{
-    value = "${module.windowsservers.public_ip_dns_name}"
-  }
-
-  output "windows_vm_public_ip" {
-    value = "${module.windowsservers.public_ip_address}"
   }
 
   output "windows_vm_private_ips" {
